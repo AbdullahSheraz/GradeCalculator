@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="title" style="margin-right: 40px;">Student <br> grade <br> Calculator</div>
+            <div class="app-form">
+                <div class="app-form-group">
+                    <input type="text" class="app-form-control" placeholder="WEB PROGRAMMING"
+                    id="wd" required>
+                </div>
+                <div class="app-form-group">
+                    <input type="text" class="app-form-control" placeholder="MATHS"
+                    id="maths" required>
+                </div>
+                <div class="app-form-group">
+                    <input type="text" class="app-form-control" placeholder="PHYSICS"
+                    id="phy" required>
+                </div>
+                <div class="app-form-group">
+                    <input type="text" class="app-form-control" placeholder="COMPUTER"
+                    id="comp" required>
+                </div>
+                <div>
+                   <input type="button" name="" value="showPercentage" 
+                   class="app-form-button" onclick="calcy()">     
+                </div>
+            </div>
+            
+
+        </nav>
+    </header>
+<script>
+    const calcy = () =>{
+        let wd = document.getElementById('wd').value;
+        let maths = document.getElementById('maths').value;
+        let phy = document.getElementById('phy').value;
+        let comp = document.getElementById('comp').value;
+        let grades = "";
+        let position = "";
+
+        
+        let totalgrades = parseFloat(wd) + parseFloat(maths) + 
+        parseFloat(phy) + parseFloat(comp);
+        let perc = (totalgrades/500)*100;
+        let average = (totalgrades/4);
+        
+
+        if(perc <= 100 && perc >= 90){
+            grades = "A+"
+        }else if(perc <= 89 && perc >= 80){
+            grades = "A"
+        }else if(perc <= 79 && perc >= 70){
+            grades = "B+"
+        }else if(perc <= 69 && perc >= 60){
+            grades = "B"
+        }else if(perc <= 59 && perc >= 40){
+            grades = "C"
+        }else{
+            grades = "F"
+        } 
+
+        if(perc <= 100 && perc >= 60){
+            position = "You are pass"
+        }else{
+            position = "You are fail"
+        }
+            
+        
+            
+        document.getElementById('showData').innerHTML = `Out of 500 your total is ${totalgrades} and percentage is ${perc}%.
+        <br> Your grade is ${grades} and ${position}. Average is ${average}`
+    }
+
+</script> 
+<div class="Data">
+                <p id="showData"></p>
+            </div>   
+</body>
+</html>

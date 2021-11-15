@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    height: 50vh;
+    width: 50%;
+    background-color: black;
+    margin-top: 200px;
+    margin-left: 300px;
+    display: flex;
+    
+}
+nav .title{
+    
+    color: darkgoldenrod;
+    align-items: center;
+    text-align: left;
+    font-size: 40px;
+    margin-top: 120px;
+    margin-bottom: 140px;
+    margin-left: 70px;
+    border-left: 4px solid darkgoldenrod;
+    padding-left: 30px;
+}
+nav .app-form{
+    padding-top: 120px;
+}
+nav .app-form-group{
+    border-bottom: 4px solid darkgoldenrod;
+    font-size: 30px;
+}
+nav .app-form-control{
+    color: darkgoldenrod;
+    font-size: 15px;
+    background: black;
+    border: none;
+}
+.Data{
+    font-size: 60px;
+    color: black;
+    text-align: center;
+    text-align: center;
+    padding-bottom: 10px;
+    justify-content: space-around;
+}
